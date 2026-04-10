@@ -4,9 +4,6 @@ import java.util.Random;
 
 public class Prodotto {
 
-    // chiamo oggetto random per farmi generare un numero random in seguito
-    Random random = new Random();
-
     // definisco le proprietà,i campi, le variabili di istanza
     int code;
     String name;
@@ -16,6 +13,9 @@ public class Prodotto {
 
     // definisco il costruttore
     public Prodotto(String name, String description, float price, int iva) {
+
+        // chiamo oggetto random per farmi generare un numero random in seguito
+        Random random = new Random();
         this.code = random.nextInt(9999);
         this.name = name;
         this.description = description;
