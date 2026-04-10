@@ -5,18 +5,22 @@ public class Main {
     public static void main(String[] args) {
         // chiamo oggetto Prodotto, andando a chiamare costruttore e creando un istanza
         // personalizzata
-        Prodotto prodotto = new Prodotto("gomma", "buona per cancellare", 0.99f, 22);
-        // Stampo i valori ottenuti a schermo
-        System.out.print(prodotto.code);
-        System.out.print(prodotto.name);
-        System.out.println(prodotto.description);
-        System.out.println(prodotto.price);
-        System.out.println(prodotto.iva);
+        Prodotto prodotto1 = new Prodotto("gomma", "buona per cancellare", 0.99f, 22);
+        Prodotto prodotto2 = new Prodotto("matita", "non si rompre mai la punta", 3.50f, 22);
+        // Stampo tabella prodotti a schermo
+        System.out.println("+----------PRODOTTO 1-------------+");
+        System.out.println(prodotto1.esteseName());
+        System.out.println(prodotto1.description);
+        System.out.println("Prezzo iniziale:" + prodotto1.priceBasic());
+        System.out.println("Prezzo ivato:" + prodotto1.priceIva());
+        System.out.println("+------------------------------+");
 
-        // Stampo i valori ottenuti dai metodi
-        System.out.println(prodotto.priceBasic());
-        System.out.println(prodotto.priceIva());
-        System.out.println(prodotto.esteseName());
+        System.out.println("+----------PRODOTTO 2-------------+");
+        System.out.println(prodotto2.esteseName());
+        System.out.println(prodotto2.description);
+        System.out.println("Prezzo iniziale:" + prodotto2.priceBasic());
+        System.out.println("Prezzo ivato:" + prodotto2.priceIva());
+        System.out.println("+------------------------------+");
 
     }
 
