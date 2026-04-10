@@ -1,5 +1,7 @@
 package org.lessons.java.shop;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Random;
 
 public class Prodotto {
@@ -8,11 +10,11 @@ public class Prodotto {
     int code;
     String name;
     String description;
-    float price;
-    int iva;
+    BigDecimal price;
+    BigDecimal iva;
 
     // definisco il costruttore
-    public Prodotto(String name, String description, float price, int iva) {
+    public Prodotto(String name, String description, BigDecimal price, BigDecimal iva) {
 
         // chiamo oggetto random per farmi generare un numero random in seguito
         Random random = new Random();
@@ -26,13 +28,17 @@ public class Prodotto {
     // definisco metodi
 
     // metodo per esporre prezzo base
-    public float priceBasic() {
+    public BigDecimal getPriceBasic() {
         return this.price;
     }
 
     // metodo per esporre prezzo comprensivo di iva
-    public float priceIva() {
-        return (float) (this.price * (1 + this.iva / 100f));
+    public BigDecimal getPriceIva() {
+        if (this.price != null && this.iva != null) {
+            return this.price.add(this.price.multiply((iva))).setScale(2, RoundingMode.DOWN);
+        } else {
+            return null;
+        }
     }
 
     // metodo per esporre nome esteso formattato
