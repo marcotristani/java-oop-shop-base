@@ -13,15 +13,15 @@ public class Main {
         // Stampo tabella prodotti a schermo
         System.out.println("+----------PRODOTTO 1-------------+");
         System.out.println(prodotto1.esteseName());
-        System.out.println(prodotto1.description);
-        System.out.println("Prezzo iniziale:" + prodotto1.getPriceBasic());
+        System.out.println(prodotto1.getDescription());
+        System.out.println("Prezzo iniziale:" + prodotto1.getPrice());
         System.out.println("Prezzo ivato:" + prodotto1.getPriceIva());
         System.out.println("+------------------------------+");
 
         System.out.println("+----------PRODOTTO 2-------------+");
         System.out.println(prodotto2.esteseName());
-        System.out.println(prodotto2.description);
-        System.out.println("Prezzo iniziale:" + prodotto2.getPriceBasic());
+        System.out.println(prodotto2.getDescription());
+        System.out.println("Prezzo iniziale:" + prodotto2.getPrice());
         System.out.println("Prezzo ivato:" + prodotto2.getPriceIva());
         System.out.println("+------------------------------+");
 
