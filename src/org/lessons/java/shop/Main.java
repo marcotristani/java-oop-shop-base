@@ -10,6 +10,8 @@ public class Main {
         Prodotto prodotto1 = new Prodotto("gomma", "buona per cancellare", new BigDecimal(0.99), new BigDecimal(0.22));
         Prodotto prodotto2 = new Prodotto("matita", "non si rompre mai la punta", new BigDecimal(3.5),
                 new BigDecimal(0.22));
+        Prodotto prodotto3 = new Prodotto();
+
         // Stampo tabella prodotti a schermo
         System.out.println("+----------PRODOTTO 1-------------+");
         System.out.println(prodotto1.esteseName());
@@ -23,6 +25,13 @@ public class Main {
         System.out.println(prodotto2.getDescription());
         System.out.println("Prezzo iniziale:" + prodotto2.getPrice());
         System.out.println("Prezzo ivato:" + prodotto2.getPriceIva());
+        System.out.println("+------------------------------+");
+
+        System.out.println("+----------PRODOTTO 3-------------+");
+        System.out.println(prodotto3.esteseName());
+        System.out.println(prodotto3.getDescription());
+        System.out.println("Prezzo iniziale:" + prodotto3.getPrice());
+        System.out.println("Prezzo ivato:" + prodotto3.getPriceIva());
         System.out.println("+------------------------------+");
 
     }

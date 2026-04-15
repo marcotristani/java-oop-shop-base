@@ -13,7 +13,7 @@ public class Prodotto {
     private BigDecimal price;
     private BigDecimal iva;
 
-    // definisco i costruttore
+    // definisco i costruttori
 
     // Costruttore di default con valori vuoti
     public Prodotto() {
